@@ -156,3 +156,64 @@ switch (level) {
 if/else does not require an `else`, you can just do `if (something) { } if (somethingelse) { }` but each statement is checked as it goes along, so if it's a super indepth process, it may be slow.
 
 switch has a default option that is run if nothing matches, and if a match is found it immediately goes to that and breaks the code, so if it's a super indepth process, it may be fast.
+
+---
+
+## Arrays
+
+Arrays are basically a massive list of ordered data, starting at 0.
+
+```
+var favFoods = ['Miso Ramen', 'Tuna Roll', 'Chicken Katsu', 'Steak'];
+
+console.log('My favorite food is ' +favFoods[0]);
+console.log('My second favorite food is ' +favFoods[3]);
+console.log('I really enjoy eating ' +favFoods[1]+ ' with ' +favFoods[2]+'.');
+
+favFoods[4] = 'Rice';
+
+console.log('Sometimes though, I would eat ' +favFoods[4]+ ' for breakfast.')
+```
+
+## Loops
+
+This example utilizes the above array
+```
+for(var i=0; i < favFoods.length; i++;) {
+  console.log(favFoods[i]);
+}
+```
+
+```
+for(var i=0; i < favFoods.length; i++;) {
+  if(favFoods[i] === 'Miso Ramen') {
+    console.log(favFoods[i]);
+    break;
+  }
+}
+```
+This loop displays any even result within the array.  The % in this is called a mod, or modifier.
+```
+for(var i=0; i < favFoods.length; i++) {
+  if (i % 2 === 0) {
+    console.log(favFoods[i]);
+  }
+}
+>> Miso Ramen
+>> Chicken Katsu
+```
+This loop will display everything that's not equal to Malaki
+```
+var myPets = ['Tangerine', 'Malaki','Cookie'];
+
+var i=0;
+
+while(i < myPets.length) {
+  if (myPets[i] !== 'Malaki') {
+  console.log(myPets[i]);
+  i++;
+  } else {
+  i++;
+  }
+}
+```
